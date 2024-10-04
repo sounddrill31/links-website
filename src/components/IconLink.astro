@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { icon, url } = Astro.props;
+---
+
+<li>
+  <a
+    href={url}
+    class="block rounded-full p-3 ring-2 ring-lightModeForegroundMuted dark:ring-darkModeForegroundMuted"
+  >
+    <Icon name={icon} class="size-6" />
+  </a>
+</li>

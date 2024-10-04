@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { text, icon, url } = Astro.props;
+---
+
+<li>
+  <a
+    href={url}
+    class="flex items-center justify-center gap-2 rounded-full py-3 text-lg outline"
+  >
+    <Icon name={icon} />
+    <span>{text}</span>
+  </a>
+</li>
