@@ -10,10 +10,10 @@ const { post } = Astro.props;
       class="flex flex-wrap justify-center text-balance text-2xl font-medium"
       >{post.data.title}</span
     >
+    <div
+      class="mt-1 text-sm text-lightModeForegroundMuted dark:text-darkModeForegroundMuted"
+    >
+      {formatDate(post.data.publicationDate)}
+    </div>
   </a>
-  <div
-    class="mt-1 text-sm text-lightModeForegroundMuted dark:text-darkModeForegroundMuted"
-  >
-    {formatDate(post.data.publicationDate)}
-  </div>
 </li>
