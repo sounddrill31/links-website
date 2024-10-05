@@ -6,7 +6,9 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  // change this to your own domain
+  redirects: {
+    "/blog": "/",
+  },
   site: "https://astro-blink.vercel.app",
   integrations: [tailwind(), sitemap(), icon()],
 });

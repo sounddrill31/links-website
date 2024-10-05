@@ -26,7 +26,7 @@ const { Content } = await entry.render();
 
 <BaseLayout>
   <SeoPost slot="head" entry={entry} />
-  <div>
+  <main>
     {
       entry.data.image && (
         <Image
@@ -44,5 +44,5 @@ const { Content } = await entry.render();
     <div class="content prose mx-auto dark:prose-invert">
       <Content />
     </div>
-  </div>
+  </main>
 </BaseLayout>
