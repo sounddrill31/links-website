@@ -9,6 +9,6 @@ export default defineConfig({
   redirects: {
     "/blog": "/",
   },
-  site: "https://astro-blink.vercel.app",
+  site: "https://example.treelink.com",
   integrations: [tailwind(), sitemap(), icon()],
 });

@@ -1,8 +1,27 @@
-import type { SiteConfiguration, SocialLinks } from "@/types.ts";
+import siteConfigJson from "./siteConfig.json";
+
+export interface SiteConfiguration {
+  name: string;
+  bio: string;
+  profilePicture: string;
+  url: string;
+  blog: boolean;
+  iconLinks: IconLink[];
+  customLinks: CustomLink[];
+}
+
+interface IconLink {
+  id: string;
+  icon: string;
+  url: string;
+}
+
+interface CustomLink {
+  id: string;
+  title: string;
+  url: string;
+}
 
 export const SITE: SiteConfiguration = {
-  name: "Trevor Tyler Lee",
-  bio: "Free, open source LinkTree alternative built with Astro & Tailwind CSS.",
-  url: "https://astro-link.vercel.app",
-  locale: "en-CA",
+  ...siteConfigJson,
 };

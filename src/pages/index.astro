@@ -1,6 +1,7 @@
 ---
-import { getCollection } from "astro:content";
-import { Icon } from "astro-icon/components";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+import { SITE } from "@/siteConfig";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
@@ -9,7 +10,8 @@ import Post from "@/components/Post.astro";
 import SeoPage from "@/components/SeoPage.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),
+  (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+    b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),
 );
 ---
 
@@ -17,8 +19,14 @@ const posts = (await getCollection("blog")).sort(
   <SeoPage slot="head" />
   <main>
     <Content />
-    <ul class="grid list-none gap-y-8 px-0 pb-16 pt-24">
-      {posts.map((post) => <Post post={post} />)}
-    </ul>
+    {
+      SITE.blog ? (
+        <ul class="grid list-none gap-y-8 px-0 py-12">
+          {posts.map((post: CollectionEntry<"blog">) => (
+            <Post post={post} />
+          ))}
+        </ul>
+      ) : null
+    }
   </main>
 </BaseLayout>

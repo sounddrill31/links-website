@@ -6,6 +6,7 @@
   :root {
     color-scheme: light dark;
 
+    /* replace colors from here... */
     --light-mode-background: 240 240 240;
     --light-mode-foreground: 0 0 0;
     --light-mode-foreground-muted: 50 50 50;
@@ -37,6 +38,7 @@
     --dark-mode-custom-link-outline-hover: 255 255 255;
     --dark-mode-custom-link-background-hover: 50 50 50;
     --dark-mode-custom-link-text-hover: 255 255 255;
+    /* ...to here */
   }
 
   body {

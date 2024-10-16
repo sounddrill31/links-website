@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import { SITE } from "@/siteConfig";
 
 import Introduction from "@/components/Introduction.astro";
 import IconLink from "@/components/IconLink.astro";
@@ -7,24 +7,17 @@ import CustomLink from "@/components/CustomLink.astro";
 ---
 
 <Introduction />
-<ul class="flex justify-center gap-4 py-16">
-  <!-- ADD ICON LINKS HERE -->
-  <IconLink url="https://trevortylerlee.com" icon="link" />
-  <IconLink url="mailto:trevortylerlee@gmail.com" icon="email" />
-  <IconLink url="https://github.com/trevortylerlee" icon="github" />
-  <IconLink url="https://twitter.com/boogerbuttcheek" icon="twitter" />
+<ul class="flex justify-center gap-4 py-12">
+  {
+    SITE.iconLinks.map((link) => {
+      return <IconLink url={link.url} icon={link.icon} />;
+    })
+  }
 </ul>
-<ul class="grid gap-y-6">
-  <!-- ADD CUSTOM LINKS HERE -->
-  <CustomLink url="https://tinyurl.com/2zp9r772">
-    🍌 donkey kong country on the snes
-  </CustomLink>
-  <CustomLink url="https://macintoshapps.com">  Best macOS apps </CustomLink>
-  <CustomLink url="https://thirtysixquestions.org">
-    💕 36 Questions To Fall In Love
-  </CustomLink>
-  <CustomLink url="https://superwebthemes.com"> SuperWeb Themes </CustomLink>
-  <CustomLink url="https://donate.stripe.com/aEU6ow7VEf7u7sseUU">
-    ♥ Donate
-  </CustomLink>
+<ul class="grid gap-y-6 pb-12 pt-4">
+  {
+    SITE.customLinks.map((link) => {
+      return <CustomLink url={link.url}>{link.title}</CustomLink>;
+    })
+  }
 </ul>
