@@ -5,8 +5,8 @@ import { SITE } from "@/siteConfig";
 export async function GET(context) {
   const blog = await getCollection("blog");
   return rss({
-    title: SITE.title,
-    description: SITE.description,
+    title: SITE.name,
+    description: SITE.bio,
     site: context.site,
     items: blog.map((post) => ({
       title: post.data.title,
