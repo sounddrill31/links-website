@@ -1,7 +1,7 @@
 #/usr/bin/bash
 
 # Cleanup
-rm -rf links-website siteConfig.* site-config.* profile-picture.jpg colorsConfig.txt || true
+rm -rf links-website src/siteConfig.* site-config.* src/profile-picture.jpg src/colorsConfig.txt || true
 
 # Download repo
 #git clone https://github.com/sounddrill31/links-website
