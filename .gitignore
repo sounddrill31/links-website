@@ -24,3 +24,9 @@ pnpm-debug.log*
 .idea/
 
 TODO.txt
+
+# site configs
+siteConfig.*
+site-config.*
+profile-picture.jpg
+colorsConfig.txt
