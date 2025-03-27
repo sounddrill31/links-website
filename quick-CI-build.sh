@@ -17,4 +17,5 @@ npm install
 #mv * ..
 #cd ..
 
+mv src/profile-picture.jpg src/assets/profile-picture.jpg
 npm run build
