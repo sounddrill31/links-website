@@ -8,7 +8,7 @@ rm -rf links-website src/siteConfig.json site-config.* src/profile-picture.jpg s
 #cd links-website
 
 # Fetch config
-wget https://github.com/sounddrill31/links-website/releases/download/27Mar2025-2/site-config.zip
+wget https://github.com/sounddrill31/links-website/releases/download/4April2025/site-config.zip
 unzip site-config.zip -d src
 
 # Prepare and build
